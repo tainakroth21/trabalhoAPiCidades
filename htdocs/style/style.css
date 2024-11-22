@@ -1,0 +1,302 @@
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("../imagens/city.jpg");
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    backdrop-filter: blur(1);
+    color: #333;
+}
+
+header {
+    background: rgb(3,137,230);
+    background: linear-gradient(90deg ,rgb(3 137 230 / 0%) 0%, rgb(16 114 168 / 11%) 100%);
+    padding: 20px;
+    text-align: center;
+}
+
+.search-form {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-input {
+    padding: 12px;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    transition: 0.5s;
+}
+
+.search-input:hover{
+    transform: scale(1.1);
+}
+
+.search-input::placeholder {
+    color: #aaa;
+}
+
+main {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+.right-panel{
+    display: flex;
+    margin: 10px;
+    flex-direction: column;
+}
+
+.left-panel {
+    display: flex;
+    padding-right: 15px;
+    flex-direction: column;
+}
+
+.map{
+    height: 650;
+    border-radius: 5px;
+}
+
+.city-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.city-name {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.quality-box {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    width: 70%;
+}
+
+.cores-indicacoes{
+    display: flex;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    flex-direction: row;
+    align-items: center;
+    width:100%;
+
+}
+
+.sq-good{
+    border-radius: 4px;
+    height: 15px;
+    width: 15px;
+    background-color: green;
+    border: 1px solid black;
+}
+.sq-fair{
+    border-radius: 4px;
+    height: 15px;
+    width: 15px;
+    background-color: rgb(117, 158, 37);
+    border: 1px solid black;
+}
+.sq-moderate{
+    height: 15px;
+    border-radius: 4px;
+    width: 15px;
+    background-color: rgb(138, 138, 10);
+    border: 1px solid black;
+}
+.sq-poor{
+    height: 15px;
+    border-radius: 4px;
+    border: 1px solid black;
+    width: 15px;
+    background-color: #CD3333;
+}
+.sq-very-poor{
+    border: 1px solid black;
+    border-radius: 4px;
+    height: 15px;
+    width: 15px;
+    background-color: #ff0000;
+}
+
+.subtitles-box{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.subtitles{
+    margin-left: 5px;
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    width: 30%;
+}
+
+.quality-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.quality-and-info{
+    display: flex;
+}
+.quality-good {
+    color: green;
+}
+
+.quality-fair {
+    color: #759e25;
+}
+
+.quality-moderate {
+    color: #8a8a0a;
+}
+
+.quality-poor {
+    color: #CD3333;
+}
+
+.quality-very-poor {
+    color: #ff0000;
+}
+
+.pollution-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.pollution-table th, 
+.pollution-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+}
+
+.pollution-table th {
+    background-color:unset;
+    color: #fff;
+}
+
+.pollution-table td {
+    background-color: #fafafa;
+}
+
+.recommendation {
+    font-size: 16px;
+    color: #666;
+    margin-top: 20px;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.error-message {
+    color: #b33a3a;
+    font-size: 18px;
+    background-color: #f8d7da;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+@media (max-width:629px){
+.quality-and-info{
+    display: block;
+}
+.quality-box{
+    width: 93%;
+}
+.subtitles{
+    width: 135px;
+}
+}
+
+@media (max-width: 425px) {
+.responsive {
+    overflow-x: auto;
+}
+
+
+
+.search-form{
+    width: 90%;
+}
+
+.city-name {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.search-input {
+    padding: 12px;
+    width: 60%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+}
+
+.pollution-table {
+    display: table;
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+.pollution-table th, 
+.pollution-table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+    font-size: 16px;
+}
+
+.pollution-table td {
+    background-color: #fafafa;
+}
+}
+.botao {
+    background-color: #267ECA;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.botao:hover {
+    background-color: #3a92e5;
+    transform: scale(1.05);
+}
+
+.botao:active {
+    background-color: #1b6fb3;
+    transform: scale(1);
+}
